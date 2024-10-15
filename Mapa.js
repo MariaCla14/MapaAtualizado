@@ -1,31 +1,16 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+document.querySelectorAll('.map-area').forEach(area => {
+    area.addEventListener('mouseover', () => {
+        area.setAttribute('title', area.dataset.name);
+    });
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
+    area.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('modalImage').src = area.dataset.img;
+        document.getElementById('modalDescription').textContent = area.dataset.desc;
+        document.getElementById('infoModal').style.display = 'block';
+    });
+});
 
-function changeSlide(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("carousel-slide");
-    let thumbnails = document.getElementsByClassName("thumbnail");
-    let description = document.getElementById("carousel-description");
-    
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.transform = `translateX(-${(slideIndex-1) * 100}%)`;
-    }
-    
-    for (i = 0; i < thumbnails.length; i++) {
-        thumbnails[i].style.opacity = "0.6";  
-    }
-    
-    thumbnails[slideIndex-1].style.opacity = "1";
-    description.textContent = slides[slideIndex-1].getAttribute("data-text");
-}
+document.getElementById('closeModal').addEventListener('click', () => {
+    document.getElementById('infoModal').style.display = 'none';
+});
