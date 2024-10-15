@@ -1,89 +1,70 @@
-.carousel {
-  position: relative;
-  width: 80%;
-  margin: auto;
+body {
+  font-family: Arial, sans-serif;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-.carousel-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-images {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.carousel-slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center; 
-}
-
-.carousel-slide img {
-  max-width: 75%; 
-  height: auto;
-  display: block;
-  border-radius: 8px; 
-}
-
-.carousel-thumbnails {
+#sec1 {
+  background-color: rgb(156, 90, 255);
+  padding: 40px;
   text-align: center;
-  margin-top: 10px;
-}
-
-.carousel-thumbnails img {
-  width: 60px;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: opacity 0.3s;
-  margin: 0 5px;
-  border-radius: 6px; 
-}
-
-.carousel-thumbnails img:hover {
-  opacity: 1;
-}
-
-.carousel-text {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.carousel-text p {
-  font-size: 1.2em;
-  color: #333;
-}
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
   color: white;
-  font-weight: bold;
-  font-size: 18px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  background-color: rgba(0,0,0,0.5);
+  border-radius: 15px;
+  width: 100%; 
+}
+
+#sec2 {
+  background-color: white;
+  padding: 40px;
   text-align: center;
-  z-index: 1000;
+  color: rgb(156, 90, 255);
+  border-radius: 15px; 
+  width: 100%; 
+  max-width: 850px; 
 }
 
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.map-container {
+  display: flex; 
+  justify-content: center; 
+  width: 100%;
 }
 
-.prev {
+.mapa-fundo {
+  width: 800px; 
+  height: auto; 
+  border-radius: 15px;
+}
+
+.map-area {
+  cursor: pointer;
+ 
+}
+
+.info-modal {
+  display: none;
+  position: fixed;
+  top: 0;
   left: 0;
-  border-radius: 3px 3px 0 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.info-modal img {
+  max-width: 60%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 30px;
 }
