@@ -1,45 +1,41 @@
-<section id="sec2">
-    <div class="carousel">
-        <div class="carousel-container">
-            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a>
-            
-            <div class="carousel-images">
-                <div class="carousel-slide" data-text="Este é o nosso pátio principal, um espaço central e vibrante onde a comunidade se encontra. É o lugar ideal para desfrutar de um lanche, bater papo com amigos ou simplesmente relaxar.">
-                    <img  src="WhatsApp Image 2024-08-25 at 09.38.39.jpeg" alt="patio1">
-                </div>
-                <div class="carousel-slide" data-text="À direita da entrada do pátio principal, você encontrará o nosso auditório, um espaço versátil e moderno destinado a eventos importantes. Seja para palestras inspiradoras, eventos e até mesmo apresentações culturais.">
-                        <img  src="auditorio.jpeg" alt="auditorio">
-                </div>
-                <div class="carousel-slide" data-text="No lado esquerdo do pátio principal, localiza-se nossa biblioteca, um refúgio de tranquilidade e conhecimento. Este é o espaço ideal para aqueles que buscam um ambiente calmo para ler, estudar ou simplesmente descansar.">
-                    <img  src="WhatsApp Image 2024-08-25 at 09.38.41 (1).jpeg" alt="biblioteca">
-                </div>
-                <div class="carousel-slide" data-text="qui você encontra a parte aberta do pátio, um espaço ao ar livre que combina a beleza natural com o conforto. Com áreas verdes e elementos naturais, este espaço oferece um ambiente relaxante e agradável.">
-                    <img  src="WhatsApp Image 2024-08-25 at 09.38.37.jpeg" alt="patio2">
-                </div>
-                <div class="carousel-slide" data-text="Subindo as escadas e indo para a direita, veremos o laboratório 4 de informática.  Este espaço é dedicado ao aprendizado e ao desenvolvimento de habilidades tecnológicas, proporcionando um ambiente ideal para estudos, pesquisas e práticas.">
-                    <img  src="lab4.jpeg" alt="lab4">
-                </div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interativo</title>
+    <link rel="stylesheet" href="Mapa.css">
+</head>
+<body>
 
+    <section id="sec1">
+        <br>
+        <br>
+        <h2 id="tv">MAPA ESCOLAR!</h2>
+        <p><strong> Novo por aqui? Relaxa que o guia te ajuda! :D</strong></p>
+        <p>:D</p>
+        
+    </section>
+    
+ <section id="sec2">
+    <div class="map-container">
+        <img src="WhatsApp Image 2024-06-30 at 11.41.57.jpeg" alt="Mapa" usemap="#mapa" class="mapa-fundo">
 
-               
-            </div>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        <map name="mapa">
+            <!-- obs: 1= posic. vertical, 2= posic horizontal, 3= expansao da area, 4= -->
+            <area shape="circle" coords="290,390,50,340" alt="Biblioteca" href="#" class="map-area" data-name="Biblioteca" data-img="biblioteca.jpeg" data-desc="Um lugar de silêncio, onde livros oferecem conhecimento para estudo.">
+            <area shape="circle" coords="290,280,50,10" alt="PátioExterno" href="#" class="map-area" data-name="Pátio Externo" data-img="patiodois.jpeg" data-desc="Um espaço ao sol, ideal para socialização e relaxamento na natureza.">
+            <area shape="circle" coords="397,305,50,10" alt="PátioInterno" href="#" class="map-area" data-name="Pátio Interno" data-img="patioum.jpeg" data-desc="Um refúgio tranquilo para conversas à sombra e momentos de tranquilidade.">
+            <area shape="circle" coords="690,410,50,10" alt="Quadra" href="#" class="map-area" data-name="Quadra" data-img="quadra.jpeg" data-desc="Um ambiente vibrante para esporte, diversão em equipe e competição.">
+            <area shape="circle" coords="580,400,50,10" alt="auditorio" href="#" class="map-area" data-name="Auditório" data-img="auditorio.jpeg" data-desc="Um espaço dedicado a eventos, apresentações e aprendizado com o público.">
         </div>
-        <div class="carousel-thumbnails">
-            <img src="WhatsApp Image 2024-08-25 at 09.38.39.jpeg" alt="patio1" class="thumbnail" onclick="currentSlide(1)">
-            <img src="auditorio.jpeg" alt="patio1" class="thumbnail" onclick="currentSlide(2)">
-            <img src="WhatsApp Image 2024-08-25 at 09.38.41 (1).jpeg" alt="biblio" class="thumbnail" onclick="currentSlide(3)">
-            <img src="WhatsApp Image 2024-08-25 at 09.38.37.jpeg" alt="patio2" class="thumbnail" onclick="currentSlide(4)">
-            <img src="lab4.jpeg" alt="lab4" class="thumbnail" onclick="currentSlide(5)">
-            
-        </div>
-        <div class="carousel-text">
-            <p id="carousel-description">MAPA ESCOLAR</p>
-        </div>
+    <div class="info-modal" id="infoModal">
+        <span class="close" id="closeModal">&times;</span>
+        <img id="modalImage" src="" alt="">
+        <p id="modalDescription"></p>
     </div>
 </section>
 
-        <script src="Mapa.js"></script>
-    </body>
-    </html>
+    <script src="Mapa.js"></script>
+</body>
+</html>
